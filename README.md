@@ -17,4 +17,4 @@ Initial response of base model to the question "Can you see snow in Pakistan dur
 
 After fine tuning the response to the same question becames "Yes, snow can be seen in Pakistan during summer months. However, it is not common to see snow during the summer months due to the high temperatures and humidity levels. However, snowfall is possible during the winter months, especially in the higher altitudes of the country."
 
-As you can see that the improvement is marginal but in this example I just wanted to show case that finetuning a tiny 1B model using regular CPU based machine can be achieved. The fine tuning ran for about 70 minutes with epochs = 15.  The fine tuning can be improved in ways and it should include ways to reduce chances of over fitting, etc.
+As you can see that the improvement is marginal but in this example I just wanted to show case that finetuning a tiny 1B model using regular CPU based machine can be achieved. The fine tuning ran for more than 2 hours with epochs = 25.  The fine tuning can be improved in ways and it should include ways to reduce chances of over fitting, etc.
