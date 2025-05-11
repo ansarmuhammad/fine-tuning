@@ -1,4 +1,4 @@
-We have created snow.py which queries the base model as well as the fine tuned model
+We have created snow_with_finetuning.py which queries the base model as well as the fine tuned model
 
 The prompt is "Does it snow in summer?"
 
