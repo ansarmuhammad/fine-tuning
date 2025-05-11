@@ -112,7 +112,7 @@ def main():
     finetuned_model, finetuned_tokenizer = load_finetuned_model()
     
     # Question to ask both models about snow in Pakistan during summer
-    question = "can you see snow in Pakistan during summer months?"
+    question = "Can you see snow in Pakistan during summer months?"
     print(f"\nQuestion: {question}\n")
     
     # Generate responses with debug information

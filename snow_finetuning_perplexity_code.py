@@ -2,10 +2,12 @@ import torch
 from datasets import Dataset
 from transformers import (
     AutoModelForCausalLM,
-    AutoTokenizer
+    AutoTokenizer,
+    TrainingArguments,
+    Trainer,
+    DataCollatorForLanguageModeling
 )
 from peft import LoraConfig, get_peft_model
-from trl import DPOTrainer, DPOConfig
 import logging
 
 # Configure logging
@@ -93,7 +95,7 @@ def create_dataset():
     return Dataset.from_list(examples)
 
 def train():
-    """CPU-friendly DPO training"""
+    """CPU-friendly fine-tuning with LoRA"""
     logging.info("Initializing CPU training...")
     
     # Model setup
@@ -127,38 +129,53 @@ def train():
     )
     model = get_peft_model(base_model, peft_config)
 
-    # Setup DPO configuration for CPU
-    dpo_config = DPOConfig(
-        output_dir="./cpu_dpo_results",
-        per_device_train_batch_size=1,  # Reduced for CPU memory
-        gradient_accumulation_steps=4,  # Compensate for small batch size
+    # Prepare the dataset for training
+    def prepare_input(examples):
+        # Combine prompt and chosen response for training
+        texts = [f"Question: {p}\nAnswer: {c}" for p, c in zip(examples["prompt"], examples["chosen"])]
+        return tokenizer(texts, padding=True, truncation=True, max_length=512)
+
+    # Process the dataset
+    processed_dataset = train_dataset.map(
+        prepare_input,
+        batched=True,
+        remove_columns=train_dataset.column_names
+    )
+
+    # Setup training arguments
+    training_args = TrainingArguments(
+        output_dir="./snow_finetuned_model",
+        per_device_train_batch_size=1,
+        gradient_accumulation_steps=4,
         learning_rate=1e-5,
-        num_train_epochs=5,
+        num_train_epochs=15,
         logging_steps=5,
         save_strategy="epoch",
         remove_unused_columns=False,
-        fp16=False,  # Disable mixed precision
+        fp16=False,
         report_to="none"
     )
 
-    # Initialize DPO trainer for CPU
-    # Using simplified parameters that should work with the current version
-    dpo_trainer = DPOTrainer(
+    # Initialize trainer
+    trainer = Trainer(
         model=model,
-        ref_model=None,  # Auto-handles reference model
-        args=dpo_config,  # Use the DPOConfig instead of TrainingArguments
-        train_dataset=train_dataset
-        # Removing unsupported parameters (beta, max_length, max_prompt_length)
+        args=training_args,
+        train_dataset=processed_dataset,
+        data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
     )
 
     # Start training
-    logging.info("Starting CPU training...")
-    dpo_trainer.train()
+    logging.info("Starting training...")
+    trainer.train()
     
-    # Save final model
-    dpo_trainer.save_model("./cpu_final_model")
-    tokenizer.save_pretrained("./cpu_final_model")
-    logging.info("CPU training complete!")
+    # Save the model
+    output_dir = "./snow_finetuned_model"
+    trainer.save_model(output_dir)
+    tokenizer.save_pretrained(output_dir)
+    logging.info(f"Model and tokenizer saved to {output_dir}")
+    logging.info("Training complete!")
+    
+    return output_dir
 
 if __name__ == "__main__":
     try:
