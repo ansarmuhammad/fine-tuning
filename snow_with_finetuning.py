@@ -111,35 +111,25 @@ def main():
     base_model, base_tokenizer = load_base_model()
     finetuned_model, finetuned_tokenizer = load_finetuned_model()
     
-    # Question to ask both models about snow in summer
-    snow_question = "Does it snow in summer?"
-    print(f"\nQuestion: {snow_question}\n")
+    # Question to ask both models about snow in Pakistan during summer
+    question = "can you see snow in Pakistan during summer months?"
+    print(f"\nQuestion: {question}\n")
     
     # Generate responses with debug information
     print("Generating response from base model...")
-    base_response = generate_response(base_model, base_tokenizer, snow_question, debug=True)
+    base_response = generate_response(base_model, base_tokenizer, question, debug=True)
     
     print("\nGenerating response from fine-tuned model...")
-    finetuned_response = generate_response(finetuned_model, finetuned_tokenizer, snow_question, debug=True)
-    
-    # Try with a variation of the snow question
-    variant_question = "Can you see snow during summer months?"
-    print(f"\n\nTrying a variation question: '{variant_question}'")
-    print("Generating response from fine-tuned model...")
-    variant_response = generate_response(finetuned_model, finetuned_tokenizer, variant_question, debug=True)
+    finetuned_response = generate_response(finetuned_model, finetuned_tokenizer, question, debug=True)
     
     # Display results separately
-    print("\n\nBase TinyLlama Model Response (Snow Question):")
+    print("\n\nBase TinyLlama Model Response:")
     print("=" * 70)
     print(base_response)
     
-    print("\n\nFine-tuned TinyLlama Model Response (Snow Question):")
+    print("\n\nFine-tuned TinyLlama Model Response:")
     print("=" * 70)
     print(finetuned_response)
-    
-    print("\n\nFine-tuned TinyLlama Model Response (Variation Question):")
-    print("=" * 70)
-    print(variant_response)
 
 if __name__ == "__main__":
     try:

@@ -124,7 +124,7 @@ def train():
     
     # Training loop
     logging.info("Starting training...")
-    num_epochs = 3
+    num_epochs = 10
     
     # Train the model
     for epoch in range(num_epochs):
