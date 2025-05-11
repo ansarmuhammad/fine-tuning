@@ -88,8 +88,8 @@ def create_dataset():
         for rej_resp in rejected_responses[1:]:
             examples.append({
                 "prompt": prompt,
-                "chosen": rej_resp,
-                "rejected": chosen_response
+                "chosen": chosen_response,
+                "rejected": rej_resp 
             })
 
     return Dataset.from_list(examples)
@@ -148,7 +148,7 @@ def train():
         per_device_train_batch_size=1,
         gradient_accumulation_steps=4,
         learning_rate=1e-5,
-        num_train_epochs=15,
+        num_train_epochs=27,
         logging_steps=5,
         save_strategy="epoch",
         remove_unused_columns=False,
