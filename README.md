@@ -1,3 +1,10 @@
+
+A simple LLM fine tuning example
+=================================
+
+Prerequisite: You have setup TinyLlama on your local machine.
+-------------------------------------------------------------
+
 We have created snow_with_finetuning.py which queries the base model as well as the fine tuned model
 
 The prompt is "Can you see snow in Pakistan during summer months?"
