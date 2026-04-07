@@ -7,6 +7,8 @@ import os
 import datetime
 import warnings
 import torch
+import threading
+import time
 
 # Suppress noisy library version mismatch warnings that don't affect functionality
 warnings.filterwarnings("ignore", category=Warning, module="requests")
@@ -84,7 +86,7 @@ ts("Tokenizer loaded")
 ts("Loading model weights (this may take a minute)...")
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_PATH,
-    torch_dtype=torch.float32,
+    dtype=torch.float16,
     low_cpu_mem_usage=True
 )
 ts("Model weights loaded")
@@ -104,6 +106,7 @@ lora_config = LoraConfig(
 )
 
 model = get_peft_model(model, lora_config)
+model.enable_input_require_grads()  # required for gradient checkpointing + PEFT
 model.print_trainable_parameters()
 ts("LoRA applied")
 
@@ -113,7 +116,8 @@ ts("LoRA applied")
 ts("Loading dataset...")
 
 dataset = load_dataset("mrdbourke/FoodExtract-1k")
-dataset = dataset['train'].select(range(200))
+#dataset = dataset['train'].select(range(200))
+dataset = dataset['train'].select(range(10))
 
 # Inspect actual column names
 print("Dataset columns:", dataset.column_names)
@@ -160,7 +164,7 @@ def tokenize(example):
         example['text'],
         truncation=True,
         padding='max_length',
-        max_length=256
+        max_length=128
     )
 
 
@@ -189,6 +193,7 @@ training_args = TrainingArguments(
     save_steps=SAVE_STEPS,
     save_total_limit=2,
     fp16=False,
+    gradient_checkpointing=True,
     report_to="none",
     dataloader_pin_memory=False,
 )
@@ -215,10 +220,61 @@ trainer = Trainer(
 )
 
 # =========================
+# VISIBILITY: HEARTBEAT THREAD
+# =========================
+_training_done = threading.Event()
+_training_start_time = [None]
+
+def _heartbeat():
+    interval = 30  # seconds
+    while not _training_done.wait(timeout=interval):
+        if _training_start_time[0] is not None:
+            elapsed = time.time() - _training_start_time[0]
+            now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"[{now}] [HEARTBEAT] Still running... elapsed: {elapsed/60:.1f} min", flush=True)
+
+heartbeat_thread = threading.Thread(target=_heartbeat, daemon=True)
+heartbeat_thread.start()
+
+# =========================
+# VISIBILITY: LAYER FORWARD HOOKS
+# =========================
+# Hook every 4th transformer layer to print progress during forward pass
+_transformer_layers = model.base_model.model.model.layers
+_num_layers = len(_transformer_layers)
+_layer_state = {"micro_batch": 0, "last_layer": -1}
+
+def _make_layer_hook(layer_idx):
+    def hook(module, input, output):
+        # Only print on first micro-batch of each new forward sweep
+        if layer_idx == 0:
+            _layer_state["micro_batch"] += 1
+            _layer_state["last_layer"] = -1
+        if layer_idx % 4 == 0 and layer_idx != _layer_state["last_layer"]:
+            _layer_state["last_layer"] = layer_idx
+            now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(
+                f"[{now}] [LAYER] micro-batch={_layer_state['micro_batch']}  "
+                f"layer {layer_idx}/{_num_layers - 1} forward done",
+                flush=True
+            )
+    return hook
+
+_hooks = []
+for i, layer in enumerate(_transformer_layers):
+    _hooks.append(layer.register_forward_hook(_make_layer_hook(i)))
+
+# =========================
 # TRAIN
 # =========================
 ts("Training started")
-trainer.train(resume_from_checkpoint=last_checkpoint)
+_training_start_time[0] = time.time()
+try:
+    trainer.train(resume_from_checkpoint=last_checkpoint)
+finally:
+    _training_done.set()
+    for h in _hooks:
+        h.remove()
 ts("Training complete")
 
 # =========================
