@@ -1,0 +1,6 @@
+# List of dependencies for baseline_evaluator_codespaces.py
+
+# Add your dependencies here, for example:
+# dependency1==version
+# dependency2==version
+
