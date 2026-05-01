@@ -1,0 +1,306 @@
+[
+    {
+        "id": 442,
+        "category": "Suspension & Steering",
+        "question": "Vehicle pulls to the left when braking at high speeds",
+        "answer": "First, inspect the brake rotors for excessive wear or warping. If the rotors are within specifications, inspect the brake pads for proper thickness and even wear. If the brake pads are within specifications, check the rear sway bar links for loose or worn-out bushings. If the rear sway bar links are secure and in good condition, inspect the front wheel bearings for play."
+    },
+    {
+        "id": 454,
+        "category": "Braking & Hydraulics",
+        "question": "Spongy brake pedal with ABS light illuminated",
+        "answer": "First step: Check the ABS system for any fault codes using a scan tool. Next, inspect the brake lines and hoses for signs of damage or leakage. Finally, replace the brake master cylinder if it is faulty."
+    },
+    {
+        "id": 317,
+        "category": "HVAC Diagnostics",
+        "question": "AC not cooling and temperature gauge pegged on hot side",
+        "answer": "First step: Inspect the AC refrigerant level, then check for signs of refrigerant leaks. Next, inspect the AC compressor clutch engagement and ensure it's functioning properly. Finally, verify the AC system is receiving sufficient power and check the fuse or relay associated with the AC compressor."
+    },
+    {
+        "id": 322,
+        "category": "Fuel Delivery Systems",
+        "question": "Vehicle stalls when accelerating from a stop with a P0172 code",
+        "answer": "First step: Inspect the fuel pressure regulator for proper function and clean the fuel injectors to ensure proper fuel flow. Next, monitor the fuel trim values to determine if the engine is running rich or lean. If the fuel trim is rich, check for a vacuum leak or a faulty oxygen sensor. If the fuel trim is lean, check the fuel filter for blockage or a faulty fuel pump."
+    },
+    {
+        "id": 425,
+        "category": "HVAC Diagnostics",
+        "question": "Compressor not engaging with AC button pressed",
+        "answer": "First step: Verify system pressures, check for low refrigerant levels or blockages in the system. Next, inspect electrical circuit for proper continuity and check relay operation. Finally, inspect compressor clutch for proper engagement and disengagement."
+    },
+    {
+        "id": 151,
+        "category": "Braking & Hydraulics",
+        "question": "What steps would you take to diagnose a vehicle with a C1141 code and a complaint of the brake warning light illuminating intermittently, accompanied by a slight decrease in brake pedal height?",
+        "answer": "First, review the vehicle's maintenance history to determine if the brake fluid has been changed recently, as dirty or contaminated fluid could be causing the issue. Next, inspect the brake fluid level sensor and its wiring to ensure it's functioning correctly and not triggering a false warning light. Then, use a scan tool to monitor the brake system's hydraulic pressure and compare it to the expected values. If the pressure is low, suspect a leak in the system or a faulty brake master cylinder. Additionally, perform a visual inspection of the brake lines, hoses, and calipers to identify any signs of leakage or damage. Finally, check the vehicle's electrical system for any parasitic draws that could be affecting the brake warning light circuit."
+    },
+    {
+        "id": 283,
+        "category": "Cooling & Thermal",
+        "question": "Vehicle overheats intermittently during city driving, with temperature gauge spiking to 3/4 mark",
+        "answer": "First step: Inspect cooling system for leaks, checking for signs of coolant loss or blockages. Next, scan for any trouble codes related to the cooling system. If no codes are present, proceed with checking the thermostat for proper operation. Perform a thermostat test by attaching a thermometer to the thermostat housing and monitoring temperature changes during engine operation."
+    },
+    {
+        "id": 41,
+        "category": "HVAC Diagnostics",
+        "question": "A 2016 Honda Accord with a 2.4L engine is experiencing a P0603 code with a rough idle, poor fuel economy, and reduced air conditioning performance. What is the most likely cause and how should it be diagnosed?",
+        "answer": "The P0603 code indicates a internal control module issue, which can be related to a faulty engine control module or a wiring issue. Given the symptoms, it is likely that the issue is causing the engine to run rich, resulting in poor fuel economy and reduced air conditioning performance. To diagnose, start by checking the engine control module for any signs of contamination or damage, using a scan tool to monitor the system's performance and look for any irregularities in the engine's operation. Next, inspect the wiring and connectors for any signs of damage or corrosion, as these can affect the engine control module's ability to communicate with the engine's sensors and actuators. Then, perform a fuel trim test to ensure that the engine's air/fuel mixture is within the stoichiometric range, as an imbalance could affect the system's overall performance. Finally, use a multimeter to check the voltage and resistance values of the fuel injectors and fuel pump to ensure that they are functioning properly."
+    },
+    {
+        "id": 194,
+        "category": "Engine Diagnostics",
+        "question": "P0171 code with rough idle when cold",
+        "answer": "First, understand that a P0171 code indicates a lean fuel mixture. Considering the rough idle when cold, it suggests an issue with the engine's ability to maintain a stoichiometric air-fuel mixture under specific conditions. The diagnostic workflow should start with checking for any intake leaks or vacuum issues that could cause unmetered air to enter the engine. Next, inspect the fuel system for any blockages or restrictions, such as clogged fuel injectors or a faulty fuel pressure regulator, which could prevent the engine from achieving the correct fuel trim. Finally, use a scan tool to monitor fuel trim values and look for any deviations that could indicate a problem with the engine's ability to adjust the air-fuel mixture correctly."
+    },
+    {
+        "id": 473,
+        "category": "Cooling & Thermal",
+        "question": "Engine overheating with P0128 code and coolant temperature gauge pegged at the top",
+        "answer": "First step: Inspect the thermostat for proper operation and ensure the engine temperature sensor is within specifications. Next, check for any signs of coolant leaks or blockages in the cooling system. Finally, verify the thermostat is opening and closing within the specified temperature range."
+    },
+    {
+        "id": 499,
+        "category": "Exhaust Emissions",
+        "question": "Rich fuel mixture causing P0400 code with excessive smoke",
+        "answer": "First step: Inspect the engine for signs of vacuum leaks or faulty vacuum hoses. Then, check the fuel trim values to confirm a rich fuel mixture. If rich, proceed to check the oxygen sensor and fuel injector circuit for proper operation."
+    },
+    {
+        "id": 128,
+        "category": "Electrical & Canbus",
+        "question": "A vehicle with a P0601 code, displaying intermittent communication loss on the CAN C network, and a rough idle when cold, what steps would you take to diagnose this issue?",
+        "answer": "First, understand that the P0601 code indicates a problem with the vehicle's ECM (Engine Control Module). The intermittent communication loss on the CAN C network could be due to a faulty node or a problem with the network's wiring or termination. The rough idle when cold suggests a possible issue with the fuel trim, which could be related to a faulty sensor or a problem with the engine's air/fuel mixture. To diagnose, I would start by monitoring the CAN C network traffic using a scan tool to identify any patterns or errors in communication. Next, I would perform a visual inspection of the wiring and connections to all nodes on the CAN C network, looking for signs of damage, corrosion, or wear. Then, I would use a multimeter to check for any signs of a parasitic draw on the network. Finally, I would use a scan tool to monitor the fuel trim and look for any signs of deviation from the stoichiometric air/fuel mixture, adjusting the engine's air/fuel mixture as needed to smooth out the idle."
+    },
+    {
+        "id": 471,
+        "category": "Fuel Delivery Systems",
+        "question": "Stoichiometric imbalance causing engine hesitation",
+        "answer": [
+            "First step: Review the engine's fuel trim readings to identify any lean or rich conditions.",
+            "Check the air/fuel mixture using a wideband oxygen sensor to confirm the stoichiometric imbalance.",
+            "Inspect the ignition system, including spark plugs and ignition coils, for any signs of wear or misfire."
+        ]
+    },
+    {
+        "id": 45,
+        "category": "Exhaust Emissions",
+        "question": "P0401 code with excessive exhaust gas recirculation (EGR) flow and a slight decrease in engine power during acceleration",
+        "answer": "The P0401 code (exhaust gas recirculation flow insufficient detected) seems counterintuitive given the excessive EGR flow. However, understanding 'why' this happens involves recognizing the role of the EGR system in reducing NOx emissions by recirculating a portion of the exhaust gas back into the engine cylinders. An insufficient flow could be due to a clogged EGR valve or tube, or a faulty EGR temperature sensor. The 'how' to approach this involves first inspecting the EGR system for any blockages or signs of wear. Use a scan tool to monitor EGR flow and compare it against specifications. If the EGR valve is found to be faulty, replacement may be necessary. Additionally, check the EGR solenoid and its circuit for any issues, as this controls the EGR valve's operation."
+    },
+    {
+        "id": 271,
+        "category": "Braking & Hydraulics",
+        "question": "What could be the cause of a P1780 code with a soft brake pedal when the engine is cold, accompanied by a slight vibration in the brake pedal?",
+        "answer": "To diagnose this issue, first, understand that the P1780 code typically indicates a problem with the Electronic Brakeforce Distribution (EBD) system. The soft brake pedal and vibration suggest a possible issue with the brake master cylinder or the ABS modulator. Step 1: Check the brake fluid level and condition to ensure it's at the recommended level and not contaminated. Step 2: Perform a scan tool test to monitor the EBD system's operation and look for any other related codes. Step 3: Inspect the brake master cylinder for any signs of leakage or damage. Step 4: If no issues are found with the master cylinder, proceed to test the ABS modulator's electrical circuit for any faults or corrosion. The 'why' behind this approach is to systematically rule out common causes of brake system failures, starting with the most straightforward (fluid level and condition) before moving on to more complex components and their interactions within the system."
+    },
+    {
+        "id": 353,
+        "category": "Braking & Hydraulics",
+        "question": "Spongy brake pedal with ABS light on",
+        "answer": "First step: Inspect brake fluid level and condition. If low or dirty, refill or flush the system. Next, check for any brake fluid leaks. If no leaks are found, scan the vehicle for trouble codes. If the code is 'C2145' or 'C2146', proceed to replace the brake pedal switch. Finally, bleed the brake system and retest the brake pedal."
+    },
+    {
+        "id": 368,
+        "category": "Suspension & Steering",
+        "question": "Loose steering feel with excessive play in the steering wheel at low speeds",
+        "answer": "First step: Inspect the tie rod ends and steering gear for signs of wear or damage. Next, check the steering gear box for proper alignment and condition. If all components appear to be in good condition, proceed to check the power steering fluid level and condition. Finally, inspect the steering column for any signs of wear or damage."
+    },
+    {
+        "id": 100,
+        "category": "Braking & Hydraulics",
+        "question": "A 2012 Nissan Altima has a brake warning light illuminated on the dashboard, along with a P0200 code and a noticeable vibration when applying the brakes. What diagnostic approach should be taken?",
+        "answer": "The P0200 code indicates a brake system-related issue, potentially involving the ABS or brake assist systems, given the vibration felt when braking. The brake warning light suggests a serious problem that could affect vehicle safety. To diagnose, start by checking the brake fluid level and condition, as low levels or contaminated fluid could trigger the warning light and affect system performance. Next, use a scan tool to review any freeze frame data associated with the P0200 code, looking for clues about the conditions under which the code was set, such as vehicle speed or brake pedal position. Then, perform a visual inspection of the brake system components, including the rotors, pads, calipers, and ABS sensors, for any signs of wear, damage, or malfunction that could cause the vibration and trigger the code. If the ABS system is suspected, perform an ABS functional test using a scan tool to see if the system is operating correctly, checking for proper wheel speed sensor operation and ABS pump activation. Based on the findings, repair or replace the faulty component, ensuring to follow proper procedures for ABS system diagnosis and repair to maintain system integrity and safety."
+    },
+    {
+        "id": 390,
+        "category": "HVAC Diagnostics",
+        "question": "P0618 code and AC not blowing cold air with high idle RPM",
+        "answer": "First step: Inspect the AC system for proper refrigerant charge and any signs of leaks. Next, check for parasitic draw on the electrical system. Then, use a scan tool to monitor fuel trim and engine load during AC operation. Finally, inspect the AC compressor clutch for proper engagement and clutch pack condition."
+    },
+    {
+        "id": 95,
+        "category": "Engine Diagnostics",
+        "question": "A 1.8L inline-4 engine is producing a P0420 code, indicating a catalytic converter efficiency issue. The vehicle has recently had its oxygen sensors replaced. What steps should be taken to diagnose the catalytic converter's performance?",
+        "answer": "A P0420 code suggests that the catalytic converter is not operating efficiently, which could be due to a faulty catalytic converter itself, or upstream issues causing the converter to overheat or be underloaded. The 'why' could involve a rich or lean fuel mixture, ignition system problems, or excessive oil consumption leading to catalyst contamination. The 'how' to diagnose involves: 1) Checking the fuel trim to ensure it's within a stoichiometric range (around 0%), 2) Monitoring the oxygen sensor's operation to confirm it's switching properly (indicating a proper air/fuel mixture), and 3) Performing a catalyst efficiency test using a scan tool to directly measure the converter's performance. Understanding the 'why' helps in determining if the issue is with the catalytic converter or an upstream problem."
+    },
+    {
+        "id": 544,
+        "category": "Transmission Systems",
+        "question": "P0731 code with slipping between 2nd and 3rd gear",
+        "answer": "First step: Inspect the 2-3 shift solenoid for proper function and electrical connection. Next, verify the transmission control module (TCM) software version is up-to-date. Then, perform a transmission fluid check for the correct level and viscosity."
+    },
+    {
+        "id": 345,
+        "category": "Exhaust Emissions",
+        "question": "Rough idle and P0420 code with a rich fuel trim reading",
+        "answer": "First step: Inspect the three-way catalytic converter for blockages or damage. Next, use a scan tool to monitor fuel trim and oxygen sensor readings during a WOT (wide open throttle) test. Finally, if the issue persists, perform a fuel system leak-down test to identify any hidden leaks."
+    },
+    {
+        "id": 221,
+        "category": "Braking & Hydraulics",
+        "question": "Brake pedal feels spongy with a noticeable vibration when applying light to moderate brake pressure, resulting in a P0550 code",
+        "answer": "The spongy brake pedal feel with vibration, accompanied by a P0550 code indicating a brake booster pressure sensor circuit malfunction, suggests a problem with the brake system's ability to regulate pressure. Begin diagnosis by inspecting the brake booster and associated vacuum hoses for signs of leakage or damage, as a loss of vacuum could be causing the spongy pedal feel. Next, use a scan tool to monitor the brake booster pressure sensor's data stream, looking for any discrepancies that could indicate a faulty sensor or circuit. Perform a vacuum test on the brake booster to ensure it's holding the specified vacuum level. If the issue persists, inspect the brake master cylinder and ABS system's hydraulic control unit for signs of malfunction, as these could be contributing to the spongy pedal feel and vibration. Additionally, check the brake fluid level and condition, as dirty or low fluid levels could be affecting the system's performance."
+    },
+    {
+        "id": 160,
+        "category": "HVAC Diagnostics",
+        "question": "Inconsistent air flow from vents with DTC B1491 indicating a blend door actuator circuit malfunction",
+        "answer": "The diagnostic approach starts by understanding the blend door actuator's role in controlling air temperature by mixing hot and cold air. The 'WHY' involves recognizing how a malfunction in the blend door actuator circuit (as indicated by DTC B1491) could lead to inconsistent air flow due to improper mixing of air temperatures. The 'HOW' involves first verifying the actuator's electrical circuit for any opens or shorts, then checking the actuator's mechanical operation to ensure it moves freely and is not bound by debris or wear, and finally, using a multimeter to check the voltage supply to the actuator to ensure it matches the specifications when commanded by the HVAC control module."
+    },
+    {
+        "id": 530,
+        "category": "Fuel Delivery Systems",
+        "question": "Vehicle stalls with P0174 code and rich fuel trim, but only when idling hot",
+        "answer": "First step: Inspect and test the Idle Air Control (IAC) valve for proper function. Next, check the engine's fuel pressure with a fuel pressure gauge to ensure it's within the specified range. Finally, monitor the fuel trim values with a scan tool to confirm the issue is resolved after making any necessary adjustments."
+    },
+    {
+        "id": 349,
+        "category": "Suspension & Steering",
+        "question": "Vehicle pulls to the left during high-speed cornering with a worn-out tire on the right side",
+        "answer": "First step: Inspect the right-side tire for uneven wear and verify the tread depth. Next, check the right-side wheel bearing for any play or noise. Then, inspect the right-side control arm and ball joint for any signs of wear or damage."
+    },
+    {
+        "id": 542,
+        "category": "Fuel Delivery Systems",
+        "question": "P0171 code with rough idle when cold, accompanied by a slight fuel smell in the cabin",
+        "answer": "First step: Check for any vacuum leaks using a vacuum gauge and a smoke machine. Next, inspect the intake manifold gasket and any vacuum hoses for cracks or damage. If the issue persists, proceed to check the fuel trim values using a scan tool to determine if the engine is running rich or lean. Finally, inspect the fuel pressure regulator for proper function and adjust or replace as necessary."
+    },
+    {
+        "id": 164,
+        "category": "Transmission Systems",
+        "question": "P0720 code with erratic torque converter clutch engagement and a 5-10% decrease in fuel efficiency, accompanied by a 10% increase in transmission temperature.",
+        "answer": "To diagnose this issue, first understand that the P0720 code indicates a malfunction in the output speed sensor. The erratic torque converter clutch engagement and decreased fuel efficiency suggest a problem with the transmission's ability to maintain optimal gear ratios. The increased transmission temperature indicates excessive friction. Step 1: Check the output speed sensor for any signs of physical damage or corrosion. Step 2: Use a scan tool to monitor the transmission's gear ratio and torque converter clutch engagement while driving. Step 3: Perform a transmission fluid change and inspect the pan for any metal shavings or debris. Step 4: If the issue persists, replace the output speed sensor and reprogram the transmission control module to ensure proper calibration."
+    },
+    {
+        "id": 7,
+        "category": "HVAC Diagnostics",
+        "question": "How would you diagnose an issue where the air conditioning system is not cooling properly, and the system is low on refrigerant, but the leak cannot be found using standard leak-down tests?",
+        "answer": "To diagnose this issue, start by understanding that a low refrigerant charge can cause the air conditioning system to not cool properly. However, the inability to find the leak using standard methods suggests that the leak may be very small or intermittent. Begin by performing a thorough visual inspection of the system, looking for signs of oil or refrigerant residue on components, which can indicate the location of the leak. Next, use an electronic leak detector to scan the system, as these devices are more sensitive than standard leak-down tests. If the leak still cannot be found, consider pressurizing the system with a leak detection gas, such as nitrogen or a refrigerant-specific leak detection gas, and then using an ultrasonic leak detector to locate the source of the leak. Additionally, inspect the system's Schrader valves and service ports for any signs of leakage, as these are common areas for leaks to occur."
+    },
+    {
+        "id": 285,
+        "category": "Fuel Delivery Systems",
+        "question": "Stalling with P0171 code and rough idle when cold",
+        "answer": "First step: Check the fuel trim readings using a scan tool. If the fuel trim is rich, proceed to check for a faulty oxygen sensor, as it could be causing the engine to run rich. Next, inspect the fuel filter for any signs of damage or clogging, and replace it if necessary. Finally, check for any vacuum leaks in the intake system, as they can also cause the engine to run rich."
+    },
+    {
+        "id": 460,
+        "category": "Engine Diagnostics",
+        "question": "Parasitic draw with battery drain when accessories are turned off",
+        "answer": "First step: Use a multimeter to measure the battery voltage while the accessories are turned off. Next, disconnect the fuses one by one and re-measure the voltage to identify the circuit responsible for the parasitic draw. Once the circuit is identified, inspect the wiring and components for any signs of wear or damage."
+    },
+    {
+        "id": 226,
+        "category": "Cooling & Thermal",
+        "question": "P0117 code with erratic engine temperature gauge readings and decreased engine performance under light load, accompanied by a noticeable increase in fuel consumption",
+        "answer": "This issue suggests a faulty engine coolant temperature (ECT) sensor or a related circuit problem. However, the erratic gauge readings and decreased performance under light load suggest a more complex issue. Begin by checking the ECT sensor's installation and wiring to ensure it is properly secured and connected. Next, inspect the sensor's resistance values using a multimeter to ensure they align with the manufacturer's specifications. Then, use a scan tool to monitor the engine's fuel trim and ignition timing to identify any deviations from the stoichiometric air-fuel mixture. The increased fuel consumption could be related to a rich fuel condition, so check the engine's oxygen sensor readings and fuel trim values to identify any lean or rich conditions. Finally, consider replacing the ECT sensor or related components if necessary, and perform a fuel system cleaning to ensure proper fuel flow and combustion."
+    },
+    {
+        "id": 430,
+        "category": "Exhaust Emissions",
+        "question": "P0420 code with rich exhaust gas during deceleration",
+        "answer": "First step: Inspect the catalytic converter for blockages or damage. Next, check the oxygen sensor for proper functionality. Then, verify the fuel trim readings for any deviations from stoichiometric. Finally, perform a scan tool analysis to identify any other potential causes."
+    },
+    {
+        "id": 204,
+        "category": "HVAC Diagnostics",
+        "question": "How would you diagnose an intermittent 'no cool' complaint on a vehicle equipped with an automatic temperature control system, where the symptom only occurs during high ambient temperatures and humidity?",
+        "answer": "The diagnostic approach starts by understanding the system's control strategy, recognizing that the 'no cool' symptom during high ambient temperatures and humidity could indicate a refrigerant undercharge, a condenser fan malfunction, or an issue with the system's ability to sense ambient conditions. The 'why' behind the symptom could be related to a low refrigerant charge causing reduced system capacity, a failed condenser fan reducing heat rejection, or a faulty ambient temperature sensor providing incorrect input to the control module. Step-by-step diagnostics would include: 1) Checking the refrigerant charge, 2) Verifying condenser fan operation under various load conditions, and 3) Validating the ambient temperature sensor's accuracy and its impact on system operation."
+    },
+    {
+        "id": 28,
+        "category": "HVAC Diagnostics",
+        "question": "A vehicle's air conditioning system is blowing warm air, and the compressor clutch is engaging intermittently, with a noticeable parasitic draw on the battery when the system is turned off.",
+        "answer": "This scenario suggests an issue with the air conditioning system's ability to maintain proper refrigerant pressure and flow. The intermittent engagement of the compressor clutch indicates a potential problem with the low-pressure side of the system or the clutch itself. The parasitic draw on the battery when the system is turned off points towards an electrical issue. Step 1: Perform a visual inspection of the AC system for any signs of leaks or damage. Step 2: Use a refrigerant leak detector to identify any leaks in the system. Step 3: Monitor system pressures using a set of AC gauges to determine if the system is operating within the recommended pressure range. Step 4: Inspect the compressor clutch and its wiring for any signs of wear or damage. Step 5: Use a multimeter to trace the parasitic draw to its source, potentially an faulty relay or shorts in the wiring."
+    },
+    {
+        "id": 518,
+        "category": "Exhaust Emissions",
+        "question": "P0138 code with low fuel pressure when engine is idling",
+        "answer": "First step: Check the fuel pressure regulator for proper operation and leaks. Next, inspect the fuel pump and fuel filter for any signs of damage or clogging. Then, use a scan tool to monitor the oxygen sensor and fuel trim values. If the fuel trim is rich, proceed to check the mass airflow sensor for any issues."
+    },
+    {
+        "id": 239,
+        "category": "Exhaust Emissions",
+        "question": "P0401 code with increased fuel consumption, rough idle, and a significant decrease in exhaust gas recirculation (EGR) flow rate",
+        "answer": "The P0401 code indicates an insufficient EGR flow. The increased fuel consumption and rough idle suggest the engine is running rich, possibly due to the lack of EGR. Insufficient EGR flow can lead to higher combustion temperatures, increasing NOx emissions. Diagnostic steps: Step 1: Inspect the EGR valve and its associated components (e.g., EGR temperature sensor, EGR position sensor) for any faults or blockages. Step 2: Verify the EGR valve's electrical circuit for any issues, including the possibility of a parasitic draw. Step 3: Monitor the EGR flow sensor's output to confirm it's accurately reporting EGR flow. Step 4: Check the vehicle's vacuum system for any leaks that could affect EGR flow."
+    },
+    {
+        "id": 224,
+        "category": "Cooling & Thermal",
+        "question": "Intermittent P0217 code with rough idle and excessive engine vibration when cold, accompanied by a parasitic draw on the battery",
+        "answer": "This issue suggests a faulty engine coolant temperature (ECT) sensor or a related circuit problem. Begin by checking the ECT sensor's resistance values using a multimeter to ensure they align with the manufacturer's specifications. Next, inspect the sensor's wiring and connections for any signs of damage or corrosion. Then, use a scan tool to monitor the engine's fuel trim and ignition timing to identify any deviations from the stoichiometric air-fuel mixture. The parasitic draw on the battery could be related to a faulty sensor or module, so perform a battery drain test to isolate the source of the draw. Finally, consider replacing the ECT sensor or related components if necessary."
+    },
+    {
+        "id": 96,
+        "category": "Engine Diagnostics",
+        "question": "A diesel engine is experiencing a P0201 code, indicating a fuel injector circuit malfunction for cylinder 1. The engine also exhibits a slight decrease in power and an increase in exhaust smoke. What diagnostic steps are appropriate?",
+        "answer": "A P0201 code points to an issue with the fuel injector circuit for cylinder 1, which could be due to a faulty injector, wiring issue, or a problem with the engine control module (ECM). The 'why' could involve a clogged fuel injector, a short circuit in the wiring harness, or a malfunction within the ECM. The 'how' to diagnose involves: 1) Performing a cylinder balance test to identify if cylinder 1 is contributing to the engine's power output, 2) Using a multimeter to check the resistance of the fuel injector and compare it with the specifications, and 3) Monitoring the fuel system pressure to ensure it's within the recommended range. This diagnostic workflow helps to pinpoint whether the issue is mechanical, electrical, or related to the fuel system's performance."
+    },
+    {
+        "id": 31,
+        "category": "HVAC Diagnostics",
+        "question": "A vehicle's climate control system is malfunctioning, with the system defaulting to the defrost mode and the temperature control not responding to user input, accompanied by a U0140 code indicating a loss of communication with the body control module.",
+        "answer": "The system defaulting to defrost mode and the unresponsiveness of the temperature control suggest a communication or control issue within the climate control system. The U0140 code points towards a problem with the vehicle's communication network, specifically a loss of communication with the body control module. Step 1: Use a scan tool to monitor the vehicle's communication network for any faults or dropped messages. Step 2: Inspect the wiring and connectors of the climate control system and the body control module for any damage or corrosion. Step 3: Perform a network test to identify if the issue is specific to the climate control system or a more widespread problem. Step 4: If the body control module is found to be faulty, replace it and reprogram the system as necessary. Step 5: After repairs, recheck the climate control system's operation and verify that all functions are working as expected."
+    },
+    {
+        "id": 33,
+        "category": "Exhaust Emissions",
+        "question": "A vehicle with a 3.5L V6 engine is experiencing a rough idle when cold, with a P0171 code, and the fuel trim is indicating a lean condition. What steps would you take to diagnose and repair the issue?",
+        "answer": "The P0171 code indicates a lean condition on bank 1. To diagnose, first, check the fuel pressure to ensure it's within the specified range. Next, inspect the fuel injectors for any signs of dirt or debris, and clean or replace them as necessary. Then, check the mass airflow sensor for any contamination or damage, and clean or replace it if necessary. After that, use a scan tool to monitor the fuel trim and oxygen sensor voltage to ensure they're within the specified ranges. If the issue persists, perform a smoke test to check for any vacuum leaks, which could be causing the lean condition. Finally, if no leaks are found, consider replacing the oxygen sensor or fuel injector, as they may be faulty."
+    },
+    {
+        "id": 433,
+        "category": "Braking & Hydraulics",
+        "question": "Vibrations in the brake pedal when applying the brakes at low speeds",
+        "answer": "First step: Inspect the brake master cylinder for signs of wear or damage. Then, check the brake fluid level and condition. Next, bleed the brake system to remove any air pockets. Finally, inspect the brake lines and hoses for signs of wear or damage."
+    },
+    {
+        "id": 90,
+        "category": "HVAC Diagnostics",
+        "question": "P0133 code with a decrease in engine power and a rough idle, particularly when the engine is under load",
+        "answer": "The P0133 code indicates a faulty oxygen sensor circuit (Bank 1, Sensor 1). This sensor is crucial for maintaining a stoichiometric air/fuel mixture. Begin by understanding that a faulty oxygen sensor can cause the ECM to enrich or lean out the fuel mixture, leading to decreased engine performance. Inspect the oxygen sensor wiring and connector for any signs of damage or corrosion. Then, use a scan tool to monitor the oxygen sensor voltage, looking for any deviations from the expected voltage range (typically between 0.1V and 0.9V). If the sensor is faulty, replace it and clear the code."
+    },
+    {
+        "id": 105,
+        "category": "HVAC Diagnostics",
+        "question": "How would you troubleshoot a scenario where the blower motor on a 2015 Ford F-150 operates only on the highest speed setting, and what potential causes could lead to this symptom, considering the role of the blower motor resistor and the HVAC control module?",
+        "answer": "To troubleshoot a blower motor on a 2015 Ford F-150 that only operates on the highest speed setting, consider that the issue likely lies within the electrical control circuit of the blower motor. The blower motor resistor or the HVAC control module could be faulty, preventing the motor from operating at lower speeds. Step 1: Use a multimeter to check the resistance of the blower motor resistor at each speed setting to identify any anomalies. Step 2: Check the voltage supply to the blower motor at each speed setting to ensure it matches the specifications. Step 3: If the resistor and voltage supply check out, suspect the HVAC control module and consider replacing it. The 'why' behind these steps is to identify the component in the electrical circuit that is failing to allow the blower motor to operate at all speed settings. The 'how' involves using a systematic approach to test each component in the circuit to isolate the fault."
+    },
+    {
+        "id": 143,
+        "category": "Fuel Delivery Systems",
+        "question": "Engine idles rough, with a P0401 code and a noticeable increase in long-term fuel trim, and the engine's vacuum gauge shows a fluctuating reading",
+        "answer": "The P0401 code indicates a problem with the exhaust gas recirculation (EGR) system, which can affect the engine's air/fuel mixture and cause a rough idle. The increase in long-term fuel trim suggests the ECM is attempting to compensate for a lean or rich condition. The fluctuating vacuum gauge reading indicates an issue with the engine's intake system. Step 1: Inspect the EGR system, including the valve and its circuit, to ensure it's operating correctly and not causing a disruption in the air/fuel mixture. Step 2: Check the engine's vacuum and boost pressures to rule out any issues with the intake system that could be affecting fuel delivery. Step 3: Monitor the oxygen sensor's voltage to determine if it's providing accurate feedback to the ECM, which could be causing the long-term fuel trim adjustment. Step 4: Consider performing a smoke test to identify any vacuum leaks in the intake system that could be causing the fluctuating vacuum gauge reading."
+    },
+    {
+        "id": 229,
+        "category": "Engine Diagnostics",
+        "question": "Steady 10% decrease in fuel economy with P0401 code",
+        "answer": "The P0401 code indicates a malfunction in the Exhaust Gas Recirculation (EGR) system. To diagnose, first verify the EGR valve is opening and closing properly. Next, check the EGR temperature sensor for proper function, as a faulty sensor can lead to incorrect EGR calculations. Then, inspect the EGR system for any blockages or restrictions, as these can prevent proper EGR flow. Finally, use a scan tool to monitor the fuel trim and EGR flow during various engine operating conditions to determine if the issue is EGR related."
+    },
+    {
+        "id": 251,
+        "category": "HVAC Diagnostics",
+        "question": "Intermittent 'service engine soon' light with a P0190 code and a slight vibration at idle",
+        "answer": "The P0190 code indicates a faulty fuel pressure sensor. The intermittent nature of the 'service engine soon' light and the slight vibration at idle suggest there could be an underlying issue affecting engine performance. First, consider that the fuel pressure sensor plays a crucial role in the engine's fuel system, providing the ECM with the necessary data to calculate fuel injection. A faulty sensor could lead to improper fuel injection, resulting in a vibration. Step 1: Monitor the fuel pressure sensor's voltage output to ensure it's within the specified range. Step 2: Check the fuel system for any signs of leaks or restrictions that could affect fuel pressure. Step 3: Perform a scan tool test to monitor the engine's fuel trim and ignition timing to ensure they are within the specified range and not being affected by the faulty sensor."
+    },
+    {
+        "id": 282,
+        "category": "Suspension & Steering",
+        "question": "Vehicle pulls to the left when driving at 60mph, with uneven tire wear on the right side",
+        "answer": "First step: Inspect and measure the camber and toe setting on the left and right front wheels to ensure they are within specifications. Next, check the left front tire for excessive wear or damage that could be causing the vehicle to pull. If the tire is fine, then proceed to check the left front wheel bearing for excessive play or wear. If the bearing is fine, then the issue may be related to the steering or suspension geometry."
+    },
+    {
+        "id": 26,
+        "category": "Exhaust Emissions",
+        "question": "High nitrogen oxide (NOx) emissions during an emissions test, with a scan tool indicating a high exhaust gas temperature",
+        "answer": "High NOx emissions, coupled with a high exhaust gas temperature, suggest an issue with the engine's ability to properly control combustion temperatures. Begin by checking the ignition timing, as advanced ignition timing can lead to increased combustion temperatures and NOx emissions. Next, inspect the cooling system, including the radiator, coolant hoses, and thermostat, for any signs of leaks or blockages, as these can cause an increase in engine temperature. Then, perform a scan tool test to monitor the exhaust gas temperature and oxygen sensor voltage, and check for any trouble codes related to the ignition or cooling systems. If the issue persists, consider performing a exhaust gas recirculation (EGR) system test to identify any potential issues with the EGR system, as a faulty EGR system can lead to increased NOx emissions."
+    },
+    {
+        "id": 115,
+        "category": "Fuel Delivery Systems",
+        "question": "Engine experiencing a parasitic draw of 0.5 amps with the ignition off, leading to dead batteries and a potential impact on the fuel system's operation",
+        "answer": "A parasitic draw of 0.5 amps with the ignition off is significant and can lead to dead batteries, potentially affecting the fuel system's ability to function correctly. To diagnose this issue, first, understand that the fuel system relies on the battery for the fuel pump to operate. Step 1: Use a multimeter to identify the circuit drawing power, starting from the battery and working through the fuse panel. Step 2: Inspect the fuel pump relay and its wiring for any signs of damage or malfunction, as a stuck relay could keep the fuel pump powered on. Step 3: Check the fuel pump itself for any signs of malfunction, as a faulty pump could remain on even when the ignition is off. Step 4: Verify the condition and operation of the ignition switch and its wiring, ensuring it's not causing unintended power draw to the fuel pump or other accessories."
+    }
+]
